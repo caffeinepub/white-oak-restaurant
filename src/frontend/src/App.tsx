@@ -492,6 +492,18 @@ function Gallery() {
       src: "/assets/generated/gallery-beverages.dim_600x400.jpg",
       label: "Beverages",
     },
+    {
+      src: "/assets/generated/gallery-restaurant.dim_600x400.jpg",
+      label: "Our Restaurant",
+    },
+    {
+      src: "/assets/generated/gallery-chef.dim_600x400.jpg",
+      label: "Our Kitchen",
+    },
+    {
+      src: "/assets/generated/gallery-food-spread.dim_600x400.jpg",
+      label: "Food Spread",
+    },
   ];
 
   return (
