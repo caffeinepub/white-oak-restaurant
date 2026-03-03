@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Outfit Variable Font */
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/Outfit[wght].woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@layer base {
+  :root {
+    /* White Oak Restaurant — Warm Earthy Palette */
+    --radius: 0.75rem;
+
+    /* Core surface */
+    --background: 0.97 0.02 80;
+    --foreground: 0.22 0.04 55;
+
+    /* Card */
+    --card: 1 0 0;
+    --card-foreground: 0.22 0.04 55;
+
+    /* Popover */
+    --popover: 1 0 0;
+    --popover-foreground: 0.22 0.04 55;
+
+    /* Primary — deep warm brown */
+    --primary: 0.45 0.09 55;
+    --primary-foreground: 0.97 0.01 80;
+
+    /* Secondary — light beige */
+    --secondary: 0.93 0.03 80;
+    --secondary-foreground: 0.35 0.07 55;
+
+    /* Muted */
+    --muted: 0.93 0.02 75;
+    --muted-foreground: 0.52 0.04 60;
+
+    /* Accent — soft natural green */
+    --accent: 0.52 0.12 145;
+    --accent-foreground: 1 0 0;
+
+    /* Destructive */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    /* Border & input */
+    --border: 0.87 0.03 75;
+    --input: 0.87 0.03 75;
+    --ring: 0.45 0.09 55;
+
+    /* Charts */
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.52 0.12 145;
+    --chart-3: 0.45 0.09 55;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    /* Sidebar */
+    --sidebar: 0.97 0.02 80;
+    --sidebar-foreground: 0.22 0.04 55;
+    --sidebar-primary: 0.45 0.09 55;
+    --sidebar-primary-foreground: 0.97 0.01 80;
+    --sidebar-accent: 0.52 0.12 145;
+    --sidebar-accent-foreground: 1 0 0;
+    --sidebar-border: 0.87 0.03 75;
+    --sidebar-ring: 0.45 0.09 55;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Outfit", sans-serif;
+  }
+}
+
+/* Fade-in animation utilities */
+@layer utilities {
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s ease-out, transform 0.65s ease-out;
+  }
+
+  .fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fade-in-delay-1 {
+    transition-delay: 0.1s;
+  }
+
+  .fade-in-delay-2 {
+    transition-delay: 0.2s;
+  }
+
+  .fade-in-delay-3 {
+    transition-delay: 0.3s;
+  }
+}
